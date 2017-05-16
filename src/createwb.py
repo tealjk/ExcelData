@@ -3,17 +3,23 @@
 import xlsxwriter
 
 
-
-workbook = xlsxwriter.Workbook('/Users/junkim/Desktop/PythonTOexcel/staging/testDataInput/testdata.xlsx')
-
-worksheet = workbook.add_worksheet()
-
-worksheet.set_column('A:A', 20)
+def createnewworkbook():
 
 
-worksheet.write('A1','Hello')
+    workbook = xlsxwriter.Workbook('/Users/junkim/Desktop/PythonTOexcel/staging/finalendpoint/newdoc.xlsx')
 
-workbook.close()
+    worksheet = workbook.add_worksheet('New')
+    worksheet = workbook.add_worksheet('New 2')
+    worksheet = workbook.add_worksheet('New 3')
+
+    worksheet.set_column('A:A', 20)
+    worksheet.write('A1','Hello')
+    workbook.close()
+
+
+    return
+
+createnewworkbook()
 
 
 
